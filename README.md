@@ -42,18 +42,18 @@ This project is a **Student Rank Predictor** based on **NEET quiz performance**.
 
 ## 🚀 Installation & Setup
 
-### 1⃣ Clone the Repository
+### </> Clone the Repository
 ```bash
 git clone https://github.com/your-username/student-rank-predictor.git
 cd student-rank-predictor
 ```
 
-### 2⃣ Install Dependencies
+### </> Install Dependencies
 ```bash
 npm install
 ```
 
-### 3⃣ Run the Server
+### </> Run the Server
 ```bash
 npm start
 ```
