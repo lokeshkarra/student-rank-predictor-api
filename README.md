@@ -88,7 +88,7 @@ This application uses the following environment variables:
 📌 **Example Usage**  
 for userId : YcDFSO4ZukTJnnFMgRNVwZTE4j42
 ```bash
-GET http://localhost:3000/performance/YcDFSO4ZukTJnnFMgRNVwZTE4j42
+GET https://student-rank-predictor-api.onrender.com/api/analysis/performance/YcDFSO4ZukTJnnFMgRNVwZTE4j42
 ```
 
 ---
@@ -97,12 +97,12 @@ GET http://localhost:3000/performance/YcDFSO4ZukTJnnFMgRNVwZTE4j42
 
 ### **Using cURL**
 ```bash
-curl -X GET http://localhost:3000/performance/YcDFSO4ZukTJnnFMgRNVwZTE4j42
+curl -X GET https://student-rank-predictor-api.onrender.com/analysis/performance/YcDFSO4ZukTJnnFMgRNVwZTE4j42
 ```
 
 ### **Using Postman**
 1. Open Postman  
-2. Make a `GET` request to `http://localhost:3000/performance/YcDFSO4ZukTJnnFMgRNVwZTE4j42`  
+2. Make a `GET` request to `https://student-rank-predictor-api.onrender.com/analysis/performance/YcDFSO4ZukTJnnFMgRNVwZTE4j42`  
 3. View the JSON response  
 
 
