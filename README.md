@@ -9,7 +9,7 @@ This project is a **Student Rank Predictor** based on **NEET quiz performance**.
 ✅ **Performance Analysis** – Computes accuracy, topic-wise performance, strengths, and weak areas.  
 ✅ **Weak Areas Identification** – Identifies topics where students struggle the most and suggests improvements.  
 ✅ **Improvement Trends** – Tracks quiz performance over time to observe trends in accuracy, speed, and scores.  
-✅ **NEET Rank Prediction** – Predicts NEET Rank prediction based on past quiz performance over time. (❗️ Note : Rank is not accurate, soon machine learning model added to improve results)
+✅ **NEET Rank Prediction** – Predicts NEET Rank prediction based on past quiz performance over time. (❗️ Note : Rank is not accurate, soon machine learning model is added to improve results)
 
 ---
 
