@@ -1,11 +1,12 @@
 const axios = require('axios');
+const dotenv = require('dotenv');
 
 async function predictRank(userId) {
   try {
     // Fetch user's performance data
     const [submissionData, historicalData] = await Promise.all([
-      axios.get('https://api.jsonserve.com/rJvd7g'),
-      axios.get('https://api.jsonserve.com/XgAgFJ')
+      axios.get(process.env.QUIZ_SUBMISSION_URL),
+      axios.get(process.env.HISTORICAL_DATA_URL)
     ]);
 
     const userHistory = historicalData.data.filter(entry => entry.user_id === userId);

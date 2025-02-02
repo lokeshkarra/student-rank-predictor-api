@@ -1,8 +1,9 @@
 const axios = require('axios');
+const dotenv = require('dotenv');
 
-const HISTORICAL_DATA_URL = 'https://api.jsonserve.com/XgAgFJ';
-const CURRENT_QUIZ_URL = 'https://www.jsonkeeper.com/b/LLQT'; // URL for current quiz data
-const QUIZ_SUBMISSION_URL = 'https://api.jsonserve.com/rJvd7g'
+const HISTORICAL_DATA_URL = process.env.HISTORICAL_DATA_URL; // URL for historical data
+const CURRENT_QUIZ_URL = process.env.CURRENT_QUIZ_URL; // URL for current quiz data
+const QUIZ_SUBMISSION_URL = process.env.QUIZ_SUBMISSION_URL; // URL for quiz submission data
 
 // --------------------- Utility functions -----------------------------//
 
