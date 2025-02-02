@@ -44,7 +44,7 @@ function calculateAverageAccuracy(history) {
 
 function calculateTopicCoverage(history) {
   const uniqueTopics = new Set(history.map(entry => entry.quiz.topic));
-  return (uniqueTopics.size / 20) * 100; // Assuming 20 total topics in NEET
+  return (uniqueTopics.size / 79) * 100; // Assuming 79 total topics in NEET
 }
 
 function calculateConsistencyScore(history) {
