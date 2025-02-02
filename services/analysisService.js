@@ -83,12 +83,6 @@ async function getImprovementTrends(userId) {
 
 
 // --------------------- Helper functions -----------------------------//
-// function calculateAverageAccuracy(history) {
-//     if (!history || !history.length) return 0;
-//     return (
-//       history.reduce((acc, entry) => acc + parseFloat(entry.accuracy), 0) / history.length
-//     );
-//   }
 
 function calculateAverageAccuracy(history) {
   if (!history || !history.length) return 0;
@@ -129,23 +123,24 @@ function calculateTopicWisePerformance(history) {
 
 function identifyStrengthAreas(history) {
   return calculateTopicWisePerformance(history)
-    .filter(topic => topic.accuracy >= 75)
+    .filter(topic => topic.accuracy >= 75)    // Filter topics with accuracy >= 75%
     .map(topic => topic.topic);
 }
 
 
+
 function identifyWeakAreas(history, submission, quiz) {
-    const historicalWeakAreas = calculateTopicWisePerformance(history)
-      .filter(topic => topic.accuracy < 60)
-      .map(topic => topic.topic);
-  
-    const currentQuizWeakAreas =  getCurrentQuizWeakAreas(submission, quiz);
-  
-    // Combine and deduplicate weak areas
-    return Array.from(new Set([...historicalWeakAreas, ...currentQuizWeakAreas]));
+  const historicalWeakAreas = calculateTopicWisePerformance(history)
+    .filter(topic => topic.accuracy < 60)
+    .map(topic => topic.topic);
+
+  const currentQuizWeakAreas =  submission ? getCurrentQuizWeakAreas(submission, quiz) : [];
+
+  // Combine, trim, lowercase, and deduplicate weak areas
+    return Array.from(new Set([...historicalWeakAreas, ...currentQuizWeakAreas]
+        .map(topic => topic.trim().toLowerCase())
+    ));
 }
-
-
 
 function calculateImprovementTrends(history) {
   if (!history || !history.length) return [];
