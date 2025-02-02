@@ -34,6 +34,7 @@ This project is a **Student Rank Predictor** based on **NEET quiz performance**.
 │️   └── predictionService.js
 │️── package.json                 # Dependencies and scripts
 │️── server.js                    # Entry point for the backend
+│️──.env                          # Environment variables file
 └── README.md                    # Project documentation
 
 ```
@@ -58,6 +59,20 @@ npm install
 npm start
 ```
 By default, the server runs on **http://localhost:3000**.
+
+---
+
+## Environment Variables
+
+This application uses the following environment variables:
+
+- `PORT`: The port on which the server will listen (e.g., `3000`).
+- `NODE_ENV`: The environment in which the application is running (e.g., `development`, `production`).
+- `HISTORICAL_DATA_URL`: The URL for fetching historical quiz data.
+- `CURRENT_QUIZ_URL`: The URL for fetching current quiz data.
+- `QUIZ_SUBMISSION_URL`: The URL for fetching quiz submission data.
+
+**Example .env file:**
 
 ---
 
