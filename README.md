@@ -80,9 +80,9 @@ This application uses the following environment variables:
 
 | Endpoint | Method | Description |
 |----------|--------|-------------|
-| `/api/performance/:userId` | `GET` | Get detailed performance analysis of a student |
-| `/api/weak-areas/:userId` | `GET` | Identify weak areas and recommended focus |
-| `/api/improvement/:userId` | `GET` | Fetch improvement trends over time |
+| `/api/analysis/performance/:userId` | `GET` | Get detailed performance analysis of a student |
+| `/api/analysis/weak-areas/:userId` | `GET` | Identify weak areas and recommended focus |
+| `/api/analysis/improvement/:userId` | `GET` | Fetch improvement trends over time |
 | `/api/prediction/rank/:userId` | `GET` | Predicts Neet rank based on performance |
 
 📌 **Example Usage**  
