@@ -1,10 +1,6 @@
 const axios = require('axios');
 const dotenv = require('dotenv');
 
-const HISTORICAL_DATA_URL = process.env.HISTORICAL_DATA_URL; // URL for historical data
-const CURRENT_QUIZ_URL = process.env.CURRENT_QUIZ_URL; // URL for current quiz data
-const QUIZ_SUBMISSION_URL = process.env.QUIZ_SUBMISSION_URL; // URL for quiz submission data
-
 // --------------------- Utility functions -----------------------------//
 
 async function fetchData(url) {
@@ -18,15 +14,15 @@ async function fetchData(url) {
 
 // Fetch and filter user history
 async function getUserHistory(userId) {
-    const history = await fetchData(HISTORICAL_DATA_URL);
+    const history = await fetchData(process.env.HISTORICAL_DATA_URL);
   return history.filter(entry => entry.user_id === userId);
 }
 
 // Fetch current quiz and submission data
 
 async function getCurrentQuizAndSubmission() {
-  const quizData = await fetchData(CURRENT_QUIZ_URL);
-  const submissionData = await fetchData(QUIZ_SUBMISSION_URL);
+  const quizData = await fetchData(process.env.CURRENT_QUIZ_URL);
+  const submissionData = await fetchData(process.env.QUIZ_SUBMISSION_URL);
  
 return {
   quiz: quizData.quiz,
